@@ -1,0 +1,21 @@
+@import '../colors.scss';
+
+// initial color declaration
+
+.home-root {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.player-parent {
+  width: 40%;
+}
+
+.weather-parent {
+  width: 40%;
+}
+
+.threat-feed-parent {
+  width: 100%;
+}

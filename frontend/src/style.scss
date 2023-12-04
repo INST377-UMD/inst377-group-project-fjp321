@@ -1,0 +1,11 @@
+@import 'colors.scss';
+
+* {
+	color: $fg;
+	background-color: $bg0;
+}
+
+::selection {
+	color: $bg0;
+	background-color: $blue;
+}

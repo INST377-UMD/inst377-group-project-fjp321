@@ -1,0 +1,19 @@
+@import '../../colors.scss';
+
+// initial color declaration
+$foreground: $bg5;
+
+.horizontal-line {
+  // sizing
+  margin: 20px 10px;
+  // borders
+  border: 1px solid $foreground;
+}
+
+.footer-info, .footer-info > * {
+  // colors
+  color: $foreground;
+  // sizing
+  text-align:center;
+}
+

@@ -1,0 +1,76 @@
+@import '../../colors.scss';
+
+// initial color declaration
+$background: $red;
+$foreground: $fg;
+$border: $aqua;
+$button_bg: $bg0;
+$hover_bg: $bg2;
+
+.navbar-root {
+	// colors
+	background-color: $background;
+	// sizing
+	margin: 12px 12px;
+	// borders
+	border: 4px solid $border;
+	border-radius: 12px;
+}
+
+.navbar-list {
+	// colors
+	background-color: $background;
+	// list styling
+	list-style: none;
+	// flex container
+	display: flex;
+	justify-content: space-around;
+}
+
+.navbar-item { 
+	// colors
+	background-color: $background;
+	// sizing 
+	margin: auto;
+	padding: 4px;
+	// flex container
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav-link {
+	// colors
+  color: $foreground;
+  background-color: $button_bg;
+	// sizing
+	width:100%;
+	margin: auto;
+	padding: 16px;
+	// borders
+	border: 4px solid $button_bg;
+	border-radius: 12px;
+	// list styling
+  text-decoration: none;
+}
+
+.nav-link:hover {
+	// colors
+  background-color: $hover_bg;
+	// borders
+	border: 2px solid $hover_bg;
+	border-radius: 12px;
+}
+
+.active {
+	// borders
+	border: 4px solid $border;
+	border-radius: 12px;
+}
+
+.active:hover {
+	// colors
+  background-color: $hover_bg;
+	// borders
+	border: 4px solid $border;
+	border-radius: 12px;
+}
