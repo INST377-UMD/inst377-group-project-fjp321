@@ -1,6 +1,7 @@
 import React from 'react';
 import WIP from '../components/WIP';
 import Player from '../components/Player';
+import Weather from '../components/Weather';
 import './Home.scss';
 
 class Home extends React.Component {
@@ -11,7 +12,7 @@ class Home extends React.Component {
           <Player parent='home'/>
         </div>
         <div className='weather-parent'>
-          <WIP parent='home'/>
+          <Weather parent='home'/>
         </div>
         <div className='threat-feed-parent'>
           <WIP parent='home'/>

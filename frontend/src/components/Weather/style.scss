@@ -1,0 +1,57 @@
+@import '../../colors.scss';
+
+// initial color declaration
+$outer-border: $aqua;
+$inner-border: $green;
+
+.weather-root {
+  // sizing
+  padding: 10px;
+  margin: 20px 10px;
+  // borders
+  border: 4px solid $outer-border;
+  border-radius: 12px;
+  // flex
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.weather-label {
+  // sizing
+  height: 130px;
+  margin: 10px;
+  // borders
+  border: 4px solid $inner-border;
+  border-radius: 12px;
+  // flex
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#temp.weather-icon {
+  font-size: 64px;
+  padding: 0px 24px 0px 6px;
+}
+
+.weather-icon {
+  font-size: 64px;
+  padding: 0px 48px 0px 6px;
+}
+
+.weather-val {
+  padding: 0px 16px 0px 12px;
+}
+
+.daily-indicators {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  width: 100%;
+}
+
+.outside-icon {
+  font-size: 72px;
+  padding: 12px;
+  margin: auto;
+}
