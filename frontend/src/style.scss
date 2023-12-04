@@ -1,11 +1,14 @@
 @import 'colors.scss';
+@import 'https://mshaugh.github.io/nerdfont-webfonts/build/firacode-nerd-font.css';
 
 * {
 	color: $fg;
 	background-color: $bg0;
+	font-family: "FiraCode Nerd Font", monospace
 }
 
 ::selection {
 	color: $bg0;
 	background-color: $blue;
 }
+

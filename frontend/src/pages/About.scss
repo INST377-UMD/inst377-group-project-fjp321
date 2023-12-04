@@ -1,21 +1,15 @@
 @import '../colors.scss';
 
 // initial color declaration
+$foreground: $bg5;
 
-.home-root {
+.contrib, .about-site {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.player-parent {
-  width: 40%;
-}
-
-.weather-parent {
-  width: 40%;
-}
-
-.threat-feed-parent {
+.contrib-header, .about-content {
+  text-align: center;
   width: 100%;
 }
