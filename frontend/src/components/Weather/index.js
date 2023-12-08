@@ -21,12 +21,14 @@ class Weather extends React.Component {
           longitude = position.coords.longitude;
           this.setState({ location: { latitude, longitude } });
           this.getWeather()
+          this.getLocationName(latitude, longitude);
         },
         (error) => {
           console.error('Error getting location:', error.message);
           console.error('setting location to washington dc');
           this.setState({ location: { latitude, longitude } });
           this.getWeather()
+          this.getLocationName(latitude, longitude);
         }
       );
     } else {
@@ -34,9 +36,32 @@ class Weather extends React.Component {
       console.error('setting location to washington dc');
       this.setState({ location: { latitude, longitude } });
       this.getWeather()
+      this.getLocationName(latitude, longitude);
     }
   }
   
+  getLocationName(latitude, longitude) {
+    fetch(`https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}`)
+    .then((res) => res.json()) 
+    .then((data) => {
+		console.log(data)
+        let city = data.address.city; 
+        let state = data.address.state; 
+        let town = data.address.town; 
+        this.setState(prevState => ({
+          location: {
+            ...prevState.location, 
+            city: city,
+            state: state,
+            town: town
+          }
+        }));
+    })
+    .catch((error) => {
+        console.error('Error fetching data:', error);
+    });
+   
+}
   getWeather(){
     let METEO_URL = "https://api.open-meteo.com/v1/forecast?" +
       "latitude=" + this.state.location.latitude +
@@ -108,6 +133,11 @@ class Weather extends React.Component {
           {this.state.weather && this.state.weather.is_precip==1 && (
             <p className='outside-icon'></p>
           )}
+        </div>
+        <div>
+        {this.state.location && (
+          <p className='weather-location'>Location: {this.state.location.town}{this.state.location.city}, {this.state.location.state}</p>
+        )}
         </div>
       </div>
     );
