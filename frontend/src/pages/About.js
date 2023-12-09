@@ -17,6 +17,7 @@ class About extends React.Component {
         <div className='contrib'>
           <h2 className='contrib-header'>Contributors</h2>
           <Card name='fjp' github_user='fjp321'/>
+          <Card name='2Aneeb' github_user='2Aneeb'/>
         </div>
       </div>
     );
