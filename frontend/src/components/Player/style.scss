@@ -20,3 +20,15 @@ playlist-uri > label, button{
   padding: 4px;
   width: 50%;
 }
+
+.playlist-uri button {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 335px) {
+  .playlist-uri input {
+    width: 90%;
+  }
+}
+
+

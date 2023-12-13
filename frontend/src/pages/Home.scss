@@ -2,6 +2,12 @@
 
 // initial color declaration
 
+
+//screen break points declarations
+$breakpoint-tablet: 850px;
+$breakpoint-mobile: 550px;
+$breakpoint-desktop: 1024px;
+
 .home-root {
   display: flex;
   justify-content: space-around;
@@ -9,13 +15,35 @@
 }
 
 .player-parent {
-  width: 40%;
+
+  float: right;
+  @media screen and (max-width: $breakpoint-desktop) {
+    width: 60%;
+  }
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 80%;
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
 }
 
 .weather-parent {
   width: 40%;
+    
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 80%;
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
 }
 
 .threat-feed-parent {
-  width: 100%;
+  width: 80%;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+
 }
