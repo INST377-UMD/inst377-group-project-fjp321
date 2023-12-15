@@ -16,12 +16,12 @@ class Navbar extends React.Component {
             <NavLink to="/about" className="nav-link" activeclassname="active">
               About
             </NavLink>
-          </li>
-          <li className="navbar-item">
+          </li> 
+           {/*<li className="navbar-item">
             <NavLink to="/help" className="nav-link" activeclassname="active">
               Help
-            </NavLink>
-          </li>
+            </NavLink> 
+          </li>*/}
         </ul>
       </div>
     );

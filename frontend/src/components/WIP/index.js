@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.scss';
 
 class WIP extends React.Component {
   render() {
