@@ -44,7 +44,6 @@ class Weather extends React.Component {
     fetch(`https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}`)
     .then((res) => res.json()) 
     .then((data) => {
-		console.log(data)
         let city = data.address.city; 
         let state = data.address.state; 
         let town = data.address.town; 

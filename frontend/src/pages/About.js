@@ -12,7 +12,7 @@ class About extends React.Component {
           <h2 className='about-content'>Features</h2>
           <p className='about-content'>Spotify integration</p>
           <p className='about-content'>Geolocation and weather data</p>
-          <p className='about-content'>CVE search and display</p>
+          <p className='about-content'>CVE display for common services for Company Incorporated</p>
         </div>
         <div className='contrib'>
           <h2 className='contrib-header'>Contributors</h2>

@@ -4,8 +4,8 @@ const axios = require('axios');
 class DataUpdater {
 	constructor() {
 		this.apiEndpoint = 'https://services.nvd.nist.gov/rest/json/cves/2.0?noRejected&isVulnerable&cpeName=';
-		this.CPEs = ['cpe:2.3:a:gitlab:gitlab:8.5.0:*:*:*:*:*:*:*','cpe:2.3:a:github:github:3.0.0:*:*:*:*:*:*:*','cpe:2.3:a:home-assistant:home-assistant:2022.03:*:*:*:*:*:*:*','cpe:2.3:a:kubernetes:kubernetes:1.6.5:*:*:*:*:*:*:*','cpe:2.3:a:matrix:synapse:3.0.0:*:*:*:*:*:*:*'];
-		this.CPEshort = ['gitlab','github','homeassistant','kubernetes','synapse'];
+		this.CPEs = ['cpe:2.3:a:gitlab:gitlab:8.5.0:*:*:*:*:*:*:*','cpe:2.3:a:github:github:3.0.0:*:*:*:*:*:*:*','cpe:2.3:a:home-assistant:home-assistant:2022.03:*:*:*:*:*:*:*','cpe:2.3:a:kubernetes:kubernetes:1.6.5:*:*:*:*:*:*:*'];
+		this.CPEshort = ['gitlab','github','homeassistant','kubernetes'];
 		this.updateInterval = 12*60*60*1000;
 		this.data = {};
 		this.fetchDataAndUpdate();
@@ -27,7 +27,7 @@ class DataUpdater {
 		try {
 			for (let index in this.CPEs) {
 				const response = await axios.get(this.apiEndpoint + this.CPEs[index]);
-				this.data[this.CPEshort[index]] = response.data.vulnerabilities.map(obj => {
+				this.data[this.CPEshort[index]] = response.data.vulnerabilities.reverse().map(obj => {
 					return {
 						id: obj.cve.id,
 						status: obj.cve.vulnStatus,
@@ -60,8 +60,8 @@ class APIServer {
 		this.app.get('/kubernetes', (req, res) => {
 			res.json(this.dataUpdater.data.kubernetes);
 		});
-		this.app.get('/data/synapse', (req, res) => {
-			res.json(this.dataUpdater.data.synapse);
+		this.app.get('/options', (req, res) => {
+			res.json(Object.keys(this.dataUpdater.data));
 		});
 	}
 	
