@@ -44,7 +44,6 @@ class Weather extends React.Component {
     fetch(`https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}`)
     .then((res) => res.json()) 
     .then((data) => {
-		console.log(data)
         let city = data.address.city; 
         let state = data.address.state; 
         let town = data.address.town; 
@@ -136,7 +135,7 @@ class Weather extends React.Component {
         </div>
         <div>
         {this.state.location && (
-          <p className='weather-location'>Location: {this.state.location.town}{this.state.location.city}, {this.state.location.state}</p>
+          <p className='weather-location'>Location: {this.state.location.state}</p>
         )}
         </div>
       </div>
