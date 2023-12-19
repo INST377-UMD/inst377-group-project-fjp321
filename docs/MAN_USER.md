@@ -1,6 +1,6 @@
-# DEV MANUAL
+# USER MANUAL
 
-Hello User! Thanks for usiing this application! In here I will describe how to use this application. 
+Hello User! Thanks for using this application! In here I will describe how to use this application. 
 
 Navigate back to readme [here](../README.md).
 
@@ -18,7 +18,7 @@ The spotify player can be updated with the form. Enter the spotify playlist iden
 
 #### Weather
 
-The weather section will inform the user the max temp, the low temp, and uv index for their location for the day. The user will be informed on the right side teh time of the sunset and sunrise in local 24 hr time. The location will be identified as well. If it is nighttime, there is a moon, and if it is daytime, then there will be a sun. 
+The weather section will inform the user the max temp, the low temp, and uv index for their location for the day. The user will be informed on the right side the time of the sunset and sunrise in local 24 hr time. The location will be identified as well. If it is nighttime, there is a moon, and if it is daytime, then there will be a sun. 
 
 #### CVE
 
