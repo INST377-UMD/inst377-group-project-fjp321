@@ -35,6 +35,8 @@ To run the backend, navigate to the backend directory, run `npm i`, then run `no
 - No env file for the frontend and backend
 - Frontend is static on port 3001, backend is port 3000
 - Issue with reverse lookup for getting info on town and city
+- To run the frontend on Windows, the package.json file needs to be edited for the "start" value. <br>
+  Change `"start": "PORT=3001 react-scripts start",` to `"start": "set PORT=3001 && react-scripts start",`
 
 ## Roadmap
 
