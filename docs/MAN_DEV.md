@@ -25,15 +25,16 @@ To run the backend, navigate to the backend directory, run `npm i`, then run `no
 | /healthcheck | Will return 'healthy if backend is healthy' |
 | /options | Will return a list of all the available endpoints of CVE application data |
 | /gitlab | Returns all gitlab cves |
-| /github | Returns all gitlab cves |
-| /homeassistant | Returns all gitlab cves |
-| /kubernetes | Returns all gitlab cves |
+| /github | Returns all github cves |
+| /homeassistant | Returns all homeassistant cves |
+| /kubernetes | Returns all kubernetes cves |
 
 ## Known Bugs
 
 - There are no node test scripts attached to this project
 - No env file for the frontend and backend
 - Frontend is static on port 3001, backend is port 3000
+- Issue with reverse lookup for getting info on town and city
 
 ## Roadmap
 

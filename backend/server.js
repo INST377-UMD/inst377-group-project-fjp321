@@ -63,6 +63,9 @@ class APIServer {
 		this.app.get('/options', (req, res) => {
 			res.json(Object.keys(this.dataUpdater.data));
 		});
+		this.app.get('/healthcheck', (req, res) => {
+			res.json({message: 'healthy'});
+		});
 	}
 	
 	start() {

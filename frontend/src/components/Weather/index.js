@@ -135,7 +135,7 @@ class Weather extends React.Component {
         </div>
         <div>
         {this.state.location && (
-          <p className='weather-location'>Location: {this.state.location.town}{this.state.location.city}, {this.state.location.state}</p>
+          <p className='weather-location'>Location: {this.state.location.state}</p>
         )}
         </div>
       </div>

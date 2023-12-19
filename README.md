@@ -10,5 +10,5 @@ This site is created to be a dashboard site where users can go to digest informa
 The website supports most modern browsers, including Chrome and Edge, as well as both desktop and mobile devices. Primary target is Firefox.
 
 ## Links
-[Link to User Manual](docs/MAN_USER.md)
-[Link to Developer Manual](docs/MAN_DEV.md)
+- [Link to User Manual](docs/MAN_USER.md)
+- [Link to Developer Manual](docs/MAN_DEV.md)
